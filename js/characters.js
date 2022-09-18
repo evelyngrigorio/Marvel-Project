@@ -12,11 +12,15 @@ const characters = {
             for(const hero of json.data.results){
                 let urlHero = hero.urls[0].url;
                 contentHTML += `
-                <div class="col-md-3">
-                    <a href="${urlHero}" target="_blank">
-                        <img src="${hero.thumbnail.path}.${hero.thumbnail.extension}" alt="${hero.name}" class="img-thumbnail">
-                    </a>
-                    <h5 class="title">${hero.name}</h5>
+                <div class="card" style="width: 18rem;" id="characters_card">
+                    <img class="card-img-top" src="${hero.thumbnail.path}.${hero.thumbnail.extension}" alt="${hero.name}">
+                    <div class="card-body">
+                        <h5 class="card-title">${hero.name}</h5>
+                        <p class="card-text">...</p>
+                        <div id="boton">
+                            <a href="${urlHero}" class="btn btn-primary">Más info</a>
+                        </div>
+                    </div>
                 </div>`;
             }
         container.innerHTML = contentHTML;

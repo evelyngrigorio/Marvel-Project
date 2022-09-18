@@ -13,12 +13,15 @@ const series = {
                 let urlSerie = serie.urls[0].url;
 
                 contentHTML += `
-                <div class="col-md-3">
-                    <a href="${urlSerie}" target="_blank">
-                        <img src="${serie.thumbnail.path}.${serie.thumbnail.extension}" alt="${serie.title}" class="img-thumbnail">
-                    </a>
-                    <h5 class="title">${serie.title}</h5>
-                    
+                <div class="card" style="width: 18rem;" id="comics_card">
+                    <img class="card-img-top" src="${serie.thumbnail.path}.${serie.thumbnail.extension}" alt="${serie.title}">
+                    <div class="card-body">
+                        <h5 class="card-title">${serie.title}</h5>
+                        <p class="card-text">...</p>
+                        <div id="boton">
+                            <a href="${urlSerie}" class="btn btn-primary">Más info</a>
+                        </div>
+                    </div>
                 </div>`;
             }
             container.innerHTML = contentHTML;

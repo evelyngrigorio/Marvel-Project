@@ -34,3 +34,12 @@ footer{
 footer > p {
     padding: 10px;
 }
+
+.btn{
+    background-color: rgb(140, 29, 29);
+    border: none;
+}
+
+#boton{
+    text-align: right;
+}
