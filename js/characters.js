@@ -16,7 +16,10 @@ const characters = {
                     <img class="card-img-top" src="${hero.thumbnail.path}.${hero.thumbnail.extension}" alt="${hero.name}">
                     <div class="card-body">
                         <h5 class="card-title">${hero.name}</h5>
-                        <p class="card-text">...</p>
+                        <h6>Series en que apareció ${hero.name}:</h6>
+                        <ul>
+                            <li></li>
+                        </ul>
                         <div id="boton">
                             <a href="${urlHero}" class="btn btn-primary">Más info</a>
                         </div>
