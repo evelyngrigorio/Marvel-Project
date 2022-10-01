@@ -1,3 +1,4 @@
+
 const characters = {
     render: ()=> {
 
@@ -8,7 +9,7 @@ const characters = {
         fetch(urlApi)
         .then(response => response.json())
         .then((json)=>{
-            console.log(json, 'response.json')
+            console.log(json)
             for(const hero of json.data.results){
                 let urlHero = hero.urls[0].url;
                 contentHTML += `
